@@ -1,4 +1,4 @@
-package com.cn.pojo;
+package com.cn.utils;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.JsonNode;

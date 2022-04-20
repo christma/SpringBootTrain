@@ -1,15 +1,10 @@
 package com.cn.controller;
 
 
-import com.cn.pojo.JsonResult;
-import com.cn.pojo.MyConfig;
-import com.cn.pojo.Stu;
-import com.cn.pojo.Student;
-import com.sun.javafx.collections.MappingChange;
+import com.cn.utils.JsonResult;
+import com.cn.utils.MyAsyncTask;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -46,8 +41,12 @@ public class StuController {
         return JsonResult.ok(body);
     }
 
+
+    @Autowired
+    private MyAsyncTask myAsyncTask;
     @PutMapping("update")
     public String updateStu() {
+        myAsyncTask.publishMsg();
         return "更新STU";
     }
 
