@@ -1,2 +1,15 @@
 server:
   port: 8080
+
+app:
+  xxx:
+    yyy:
+      zzz: nihaoxyz
+
+
+spring:
+  banner:
+    location: classpath:banner/fo
+#    image:
+#      location: classpath:banner/2.jpg
+#      pixelmode: block
