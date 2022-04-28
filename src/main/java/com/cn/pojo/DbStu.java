@@ -1,9 +1,11 @@
 package com.cn.pojo;
 
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table(name = "db_stu")
 public class DbStu {
+    @Id
     private String id;
 
     private String name;
